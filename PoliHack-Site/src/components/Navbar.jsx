@@ -58,10 +58,11 @@ export default function Navbar() {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/feedback" className="text-white" onClick={closeMenu}>
-                Feedback
+              <NavLink to="https://docs.google.com/forms/d/e/1FAIpQLSe7UsnfNKoZYfhPPdDzdxwB_XFSP_g0TCpKb9q3YpQSB6bceg/viewform?embedded=true" target="_blank" className="text-white" onClick={closeMenu}>
+                  FeedBack
               </NavLink>
             </li>
+           
             <li>
               <NavLink to="https://forms.gle/EQrxtDr8uhcBnKyg9" target="_blank"  className="text-white" onClick={closeMenu}>
                 Team Register
