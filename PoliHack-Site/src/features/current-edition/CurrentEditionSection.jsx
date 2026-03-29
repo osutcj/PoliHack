@@ -55,22 +55,12 @@ export default function CurrentEditionSection() {
             <Col xs={24} sm={12} md={12} lg={12}>
               <Document title="REGULATIONS" source={regulationsLink} image={bannerImage} />
             </Col>
-            <Col xs={24} sm={12} md={12} lg={12}>
-              <Document
-                title="REGULATIONS (INDIVIDUAL PARTICIPANT)"
-                source={regulationsSingleLink}
-                image={bannerImage}
-              />
-            </Col>
-          </Row>
-          <Row gutter={[16, 16]}>
-            <Col xs={24} sm={12} md={12} lg={12}>
+              <Col xs={24} sm={12} md={12} lg={12}>
               <Document title="PARENTAL CONSENT" source={acordLink} image={bannerImage} />
             </Col>
-            <Col xs={24} sm={12} md={12} lg={12}>
-              <Document title="PROGRAM (COMING SOON)" image={bannerImage} />
-            </Col>
           </Row>
+
+         
         </div>
       </Content>
     </>

@@ -64,14 +64,10 @@ export default function Navbar() {
             </li>
             <li>
               <a href="https://forms.gle/EQrxtDr8uhcBnKyg9" target="_blank" rel="noopener noreferrer" className="text-white" onClick={closeMenu}>
-                Team Register
+                Register
               </a>
             </li>
-            <li>
-              <a href="https://forms.gle/QZGai7GVovpCGdkc9" target="_blank" rel="noopener noreferrer" className="text-white" onClick={closeMenu}>
-                Solo Register
-              </a>
-            </li>
+            
             <li>
               <a 
                 className="text-white" 

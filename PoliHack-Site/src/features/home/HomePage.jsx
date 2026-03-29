@@ -80,7 +80,7 @@ export default function HomePage() {
             bring your ideas to life.
           </p>
         </div>
-        <Sponsors />
+      {/* <Sponsors />*/}
         <Stats />
         <AboutSection />
         <CurrentEditionSection />
