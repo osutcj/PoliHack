@@ -24,6 +24,7 @@ export default function Stats() {
                 value={cleanValue(stat.value)}
                 formatter={formatter}
                 suffix={stat.value.includes("+") ? "+" : ""}
+                valueStyle={{ fontWeight: "bold" }}
               />
             </Col>
           ))}
