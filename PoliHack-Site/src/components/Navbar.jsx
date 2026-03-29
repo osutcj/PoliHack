@@ -29,10 +29,10 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${navBackground ? "scrolled" : ""} ${isMenuOpen ? "menu-open" : ""}`}>
       <div className="container">
-        <Link href="/" className="logo" onClick={closeMenu}>
+        <Link href="/" prefetch className="logo" onClick={closeMenu}>
           <img src="/assets/Logos/LogoWhite.png" alt="Logo" />
         </Link>
-        <Link href="/" className="navbar-brand" onClick={closeMenu}>
+        <Link href="/" prefetch className="navbar-brand" onClick={closeMenu}>
           PoliHack
         </Link>
         <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle navigation menu">
@@ -53,12 +53,12 @@ export default function Navbar() {
               </Link>
             </li> */}
             <li>
-              <Link href="/past-editions-2" className="text-white" onClick={closeMenu}>
+              <Link href="/past-editions-2" prefetch className="text-white" onClick={closeMenu}>
                 Past Editions
               </Link>
             </li>
             <li>
-              <Link href="/feedback" className="text-white" onClick={closeMenu}>
+              <Link href="/feedback" prefetch className="text-white" onClick={closeMenu}>
                 Feedback
               </Link>
             </li>
@@ -75,7 +75,7 @@ export default function Navbar() {
             <li>
               <a 
                 className="text-white" 
-                href="https://osutcluj.pixieset.com/polihackv15/" 
+                href="https://osutcluj.pixieset.com/polihack-2/" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >

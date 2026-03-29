@@ -93,7 +93,7 @@ export default function Footer() {
 
               {/* Mail */}
               <div className="p-2 p-lg-3 mt-2 mt-lg-3 footer-icon-social hover-image">
-                <a href="mailto:contact@polihack.org" target="_blank" rel="noopener noreferrer">
+                <a href="mailto:polihhack@osutcluj.com" target="_blank" rel="noopener noreferrer">
                   <MailOutlined className="w-100" />
                 </a>
               </div>
@@ -129,22 +129,22 @@ export default function Footer() {
                 Contact Info
               </h3>
               <p className="text-white contact-info text-bold">
-                Ormindean Vlad - BC Responsible
+                Andreea Arimia - BC Responsible
               </p>
               <p className="text-white contact-info">
-                Phone Number: +40 743 135 003
+                Phone number: +40 762 385 168
               </p>
               <p className="text-white contact-info">
-                Email: ormindeanvlad@gmail.com
+                Email: andreea.arimia@osutcluj.com
               </p>
               <p className="text-white contact-info text-bold">
-                Diana Clim - Coordinator
+                Iulian Chirilă - Coordinator
               </p>
               <p className="text-white contact-info">
-                Phone Number:  +40 754 477 751
+                Phone number: +40 746 375 020
               </p>
               <p className="text-white contact-info">
-                Email: clim.diana2017@gmail.com
+               Email: iulian.chirila@osutcluj.com
               </p>
             </div>
           </div>

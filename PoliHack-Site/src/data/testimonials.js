@@ -1,7 +1,7 @@
 export const testimonials = [
   {
     id: 1,
-    name: "Oana DurcÄƒu",
+    name: "Oana Durcău",
     image: "/assets/Testimonials/OanaDurcau.jpg",
     testimonial:
       "PoliHack is an excellent opportunity to turn the knowledge gained in university into a practical experience of learning, discovery, and perhaps even self-discovery. My recommendation is for participants to stay open-minded, seek help from mentors and peers, and think outside the box. They should explore ideas with real-world applications that solve concrete problems. PoliHack isnâ€™t just about writing code; itâ€™s about experiencing an intense journey that pushes them out of their comfort zones and provides valuable lessons for both their careers and personal growth. PoliHack is not only a competition but also a place where participants can learn from one another.",
@@ -28,7 +28,7 @@ export const testimonials = [
   },
   {
     id: 4,
-    name: "Teodora NemeÈ™",
+    name: "Teodora Nemeș",
     image: "/assets/Testimonials/TeodoraNemes.jpg",
     testimonial:
       "The PoliHack experience showed me how powerful an idea can become when you have the right people by your side. In just 48 hours, we turned a simple concept into a real product, enhancing not only our technical skills but also essential communication, collaboration, and adaptability skills. The hackathon helps you discover the career path that suits you, giving you a clear perspective on what you want to build in the future. PoliHack is not just about technology and pitches; itâ€™s about people who put passion into what they do and about experiences that contribute to both your personal and professional growth.",
@@ -37,7 +37,7 @@ export const testimonials = [
   },
   {
     id: 5,
-    name: "Matei MihuÈ›",
+    name: "Matei Mihuț",
     image: "/assets/Testimonials/MateiMihut.jpg",
     testimonial:
       "The excellent communication with the organizing team, the enjoyable and informative workshops, mentors ready to help anytime with any technical or non-technical issue, and the friendly participants all contributed to an amazing experience. I highly recommend participating, even if you donâ€™t have extraordinary technical knowledge. I feel like I learned a lot from PoliHack!",

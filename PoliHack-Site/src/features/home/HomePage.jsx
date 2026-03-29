@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Layout } from "antd";
 import AboutSection from "@/features/about/AboutSection";
 import CurrentEditionSection from "@/features/current-edition/CurrentEditionSection";
@@ -11,29 +11,33 @@ import styles from "@/pages/Home.module.scss";
 
 const { Header, Content } = Layout;
 
-const COUNTDOWN_TARGET = new Date("Nov 20, 2025 23:59:59").getTime();
+const COUNTDOWN_TARGET = new Date("2026-04-24T16:00:00+03:00").getTime();
+
+function formatCountdown(target) {
+  const now = new Date().getTime();
+  const distance = target - now;
+
+  if (distance <= 0) {
+    return "Hackathon Has Started!";
+  }
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+}
 
 export default function HomePage() {
+  const [countdown, setCountdown] = useState(() => formatCountdown(COUNTDOWN_TARGET));
+
   useEffect(() => {
     const interval = window.setInterval(() => {
-      const now = new Date().getTime();
-      const distance = COUNTDOWN_TARGET - now;
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      const timerElement = document.getElementById("timer");
-      if (!timerElement) {
-        return;
-      }
-
-      timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s `;
-      if (distance < 0) {
+      const nextValue = formatCountdown(COUNTDOWN_TARGET);
+      setCountdown(nextValue);
+      if (nextValue === "Hackathon Has Started!") {
         clearInterval(interval);
-        timerElement.innerHTML = "Hackaton Has\nEnded!";
       }
     }, 1000);
 
@@ -49,8 +53,8 @@ export default function HomePage() {
           <div className={styles.heroContent}>
             <h1 className={styles.heading}>#Engineering the future!</h1>
             <img className={styles.logo} src="/assets/Logos/LogoWhite.png" alt="Logo PoliHack" />
-            <h1 className={styles.heading}>Registration ends in:</h1>
-            <p className={styles.timer} id="timer" role="timer" aria-live="polite"></p>
+            <h1 className={styles.heading}>Hackathon starts in:</h1>
+            <p className={styles.timer} id="timer" role="timer" aria-live="polite">{countdown}</p>
           </div>
         </section>
         <div className={styles.descriptionSection}>

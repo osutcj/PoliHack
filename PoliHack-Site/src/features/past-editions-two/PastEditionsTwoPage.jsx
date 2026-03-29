@@ -51,7 +51,7 @@ function AnimatedStat({ label, value, triggerKey }) {
 }
 
 export default function PastEditionsTwoPage() {
-  const [activeEdition, setActiveEdition] = useState("v17");
+  const [activeEdition, setActiveEdition] = useState("v18");
   const activeEditionDetails = editionDetails[activeEdition];
 
   return (
@@ -63,7 +63,7 @@ export default function PastEditionsTwoPage() {
           <div className={styles.pastEditionTwoHeader}>
             <h1 className={styles.headingHover}>Relive the last editions</h1>
             <p className={styles.sectionIntro}>
-              Toggle between v.15 - v.17 to see the winning teams, core metrics,
+              Toggle between v.15 - v.18 to see the winning teams, core metrics,
               and standout learnings. Update the copy anytime straight from this
               data block.
             </p>

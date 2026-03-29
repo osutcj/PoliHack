@@ -16,7 +16,7 @@ export const pastEditionCarouselImages = [
   { src: "/assets/Images/PoliHackV15_7.png" },
 ];
 
-export const editionOrder = ["v15", "v16", "v17"];
+export const editionOrder = ["v15", "v16", "v17", "v18"];
 
 export const editionDetails = {
   v15: {
@@ -79,6 +79,27 @@ export const editionDetails = {
       { category: "Embedded", team: "HalfAByteParty", image: "/assets/Images/v17Embedded.jpg" },
       { category: "Web", team: "LTCode", image: "/assets/Images/v17Web.jpg" },
       { category: "Junior", team: "TechTornado", image: "/assets/Images/v17Junior.jpg" },
+    ],
+  },
+  v18: {
+    label: "v.18",
+    year: "2025",
+    title: "PoliHack v.18",
+    heroText:
+      "PoliHack v.18 brings a new round of fast-paced building, collaboration, and problem solving, with teams working side by side in Cluj to turn ambitious ideas into polished prototypes. The edition keeps the same competitive energy and hands-on spirit, while opening the floor for a fresh set of winning teams across the core categories.",
+    dates: "5-7 December 2025",
+    location: "Cluj Bussiness Campus, Cloudflight Office",
+    stats: [
+      { label: "Participants", value: 69 },
+      { label: "Teams", value: 69 },
+      { label: "Mentors", value: 69 },
+    ],
+    winnerCategories: [
+      { category: "AppDev", team: "NoAiUsed", image: "/assets/Images/v18App.jpg" },
+      { category: "Cybersecurity", team: "Segmentation Faults", image: "/assets/Images/v18Cyber.jpg" },
+      { category: "Embedded", team: "Liceul De Pescuit Sportiv Iernut", image: "/assets/Images/v18Embedded.jpg" },
+      { category: "Web", team: "Ultimii 5 Neuroni", image: "/assets/Images/v18Web.jpg" },
+      { category: "Junior", team: "MOROMEȚII", image: "/assets/Images/v18Junior.jpg" },
     ],
   },
 };
