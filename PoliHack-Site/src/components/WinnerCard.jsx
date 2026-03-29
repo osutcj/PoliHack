@@ -1,2 +1,3 @@
-
-import "./WinnerCard.scss";
+export default function WinnerCard() {
+  return null;
+}

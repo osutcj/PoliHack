@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useRef } from "react";
+"use client";
+
 import PropTypes from "prop-types";
-import "./Slider.scss";
+import { useEffect, useRef, useState } from "react";
 
 function Slider({ slides, autoplay = true, displayTime = 3000 }) {
   const [displayCount, setDisplayCount] = useState(3);

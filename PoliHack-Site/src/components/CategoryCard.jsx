@@ -1,6 +1,3 @@
-import React from "react";
-import "./CategoryCard.scss";
-import "bootstrap/dist/css/bootstrap.css";
 import * as AntIcons from "@ant-design/icons";
 
 export default function CategoryCard({ title, description, icon }) {

@@ -1,7 +1,5 @@
-import React from "react";
 import { Col, Row, Statistic } from "antd";
 import CountUp from "react-countup";
-import "./Stats.scss";
 
 const formatter = (value) => <CountUp end={value} separator="," />;
 

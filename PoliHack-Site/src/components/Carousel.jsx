@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './Carousel.scss'
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 
 const Carousel = ({ images, autoplay = true, interval = 3000 }) => {
   const [activeIndex, setActiveIndex] = useState(0);

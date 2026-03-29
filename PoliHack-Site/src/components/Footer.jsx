@@ -1,9 +1,5 @@
-import React from "react";
-import "./Footer.scss";
-import Logo from "/src/assets/LogoText.png";
-import UTCN from "/src/assets/Logos/UTCNWhite.png";
-import OSUT from "/src/assets/Logos/OSUTWhite.png";
-import "bootstrap/dist/css/bootstrap.css";
+"use client";
+
 import {
   FacebookFilled,
   InstagramOutlined,
@@ -28,7 +24,7 @@ export default function Footer() {
             >
               <img
                 className="align-center UTCN_Logo"
-                src={UTCN}
+                src="/assets/Logos/UTCNWhite.png"
                 alt="UTCN Logo"
               />
             </a>
@@ -43,7 +39,7 @@ export default function Footer() {
             >
               <img
                 className="align-center OSUT_Logo"
-                src={OSUT}
+                src="/assets/Logos/OSUTWhite.png"
                 alt="OSUT Logo"
               />
             </a>
@@ -111,6 +107,7 @@ export default function Footer() {
           <div className="col-12 col-md-3 d-flex justify-content-center">
             <div className="left-content hover-image">
               <a
+                href="/"
                 onClick={(e) => {
                   e.preventDefault();
                   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -118,7 +115,7 @@ export default function Footer() {
               >
                 <img
                   className="img-fluid footer-image align-button"
-                  src={Logo}
+                  src="/assets/LogoText.png"
                   alt="Logo"
                 />
               </a>

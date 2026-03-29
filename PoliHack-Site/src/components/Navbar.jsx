@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
-import LogoWhite from "/src/assets/Logos/LogoWhite.png";
-import "./Navbar.scss";
+"use client";
+
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const [navBackground, setNavBackground] = useState(false);
@@ -29,12 +29,12 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${navBackground ? "scrolled" : ""} ${isMenuOpen ? "menu-open" : ""}`}>
       <div className="container">
-        <NavLink to="/" className="logo" onClick={closeMenu}>
-          <img src={LogoWhite} alt="Logo" />
-        </NavLink>
-        <NavLink to="/" className="navbar-brand" onClick={closeMenu}>
+        <Link href="/" className="logo" onClick={closeMenu}>
+          <img src="/assets/Logos/LogoWhite.png" alt="Logo" />
+        </Link>
+        <Link href="/" className="navbar-brand" onClick={closeMenu}>
           PoliHack
-        </NavLink>
+        </Link>
         <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle navigation menu">
           <span className={`bar ${isMenuOpen ? "open" : ""}`}></span>
           <span className={`bar ${isMenuOpen ? "open" : ""}`}></span>
@@ -43,34 +43,34 @@ export default function Navbar() {
         <div className={`nav-links ${isMenuOpen ? "open" : ""}`}>
           <ul>
             {/* <li>
-              <NavLink to="/about" className="text-white" onClick={closeMenu}>
+              <Link href="/about" className="text-white" onClick={closeMenu}>
                 About us
-              </NavLink>
+              </Link>
             </li> */}
             {/* <li>
-              <NavLink to="/current-edition" className="text-white" onClick={closeMenu}>
+              <Link href="/current-edition" className="text-white" onClick={closeMenu}>
                 Current Edition
-              </NavLink>
+              </Link>
             </li> */}
             <li>
-              <NavLink to="/past-editions-2" className="text-white" onClick={closeMenu}>
+              <Link href="/past-editions-2" className="text-white" onClick={closeMenu}>
                 Past Editions
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink to="/feedback" className="text-white" onClick={closeMenu}>
+              <Link href="/feedback" className="text-white" onClick={closeMenu}>
                 Feedback
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink to="https://forms.gle/EQrxtDr8uhcBnKyg9" target="_blank"  className="text-white" onClick={closeMenu}>
+              <a href="https://forms.gle/EQrxtDr8uhcBnKyg9" target="_blank" rel="noopener noreferrer" className="text-white" onClick={closeMenu}>
                 Team Register
-              </NavLink>
+              </a>
             </li>
             <li>
-              <NavLink to="https://forms.gle/QZGai7GVovpCGdkc9" target="_blank"  className="text-white" onClick={closeMenu}>
+              <a href="https://forms.gle/QZGai7GVovpCGdkc9" target="_blank" rel="noopener noreferrer" className="text-white" onClick={closeMenu}>
                 Solo Register
-              </NavLink>
+              </a>
             </li>
             <li>
               <a 

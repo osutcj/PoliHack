@@ -1,7 +1,3 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.css";
-import "./TeamCard.scss";
-
 import { InstagramOutlined, FacebookFilled } from "@ant-design/icons";
 
 export default function TeamCard({ name, role, image, instagram, facebook }) {
@@ -14,10 +10,10 @@ export default function TeamCard({ name, role, image, instagram, facebook }) {
         <h3 className="card-title text-center mt-2">{name}</h3>
         <p className="card-text text-center">{role}</p>
         <div className="d-flex justify-content-center">
-          <a href={instagram} target="_blank" className="team-instagram">
+          <a href={instagram} target="_blank" rel="noopener noreferrer" className="team-instagram">
             <InstagramOutlined />
           </a>
-          <a href={facebook} target="_blank" className="team-facebook">
+          <a href={facebook} target="_blank" rel="noopener noreferrer" className="team-facebook">
             <FacebookFilled />
           </a>
         </div>

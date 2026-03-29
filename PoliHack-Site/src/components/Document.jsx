@@ -1,7 +1,3 @@
-import React from "react";
-import "./Document.scss";
-import "bootstrap/dist/css/bootstrap.css";
-
 function Document({ title, source, image }) {
   return (
     <div className="document-container w-100">

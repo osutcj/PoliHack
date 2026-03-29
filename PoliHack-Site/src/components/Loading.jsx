@@ -1,7 +1,3 @@
-import React from 'react';
-import LogoRed from '/src/assets/Logos/LogoRed.png';
-import './Loading.scss';
-
 const Loading = ({ isLoading }) => {
   if (!isLoading) return null;
   
@@ -11,7 +7,7 @@ const Loading = ({ isLoading }) => {
         <div className="hud-circle"></div>
         <div className="hud-circle hud-circle-2"></div>
         <div className="logo-container">
-          <img src={LogoRed} alt="PoliHack Logo" className="logo" />
+          <img src="/assets/Logos/LogoRed.png" alt="PoliHack Logo" className="logo" />
         </div>
       </div>
     </div>
