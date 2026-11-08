@@ -21,12 +21,11 @@
   }
 
   .container {
-    justify-content: left !important;
-    gap: 1rem;
     display: flex;
     align-items: center;
     width: 100%;
     margin-left: 10rem;
+    gap: 1rem;
   }
 
   .logo, .navbar-brand, .text-white {
@@ -46,42 +45,72 @@
     font-size: 1.5rem;
     font-weight: bold;
     color: white !important;
+    white-space: nowrap;
   }
 
-  .text-white {
-    font-size: 22px;
-  }
-
-  .text-white:hover, .navbar-brand:hover {
-    color: var(--primary-accent) !important;
-  }
-
+  // --- Nav links: pushed to the right, smaller & lighter typography ---
   .nav-links {
     display: flex;
     gap: 2rem;
+    margin-left: auto; // push the entire link group to the far right
 
     ul {
       list-style: none;
       display: flex;
-      gap: 1rem;
+      align-items: center;
+      gap: 1.75rem;
       margin: 0;
       padding: 0;
 
       li {
-        .nav-link {
+        // Give every link inside <li> the hover-underline animation
+        a, .nav-link {
+          position: relative;
           text-decoration: none;
-          color: white !important;
-          font-size: 1rem;
-          transition: color 0.3s ease-in-out;
+          color: rgba(255, 255, 255, 0.85) !important;
+          font-size: 0.9rem;        // smaller than brand text
+          font-weight: 400;         // lighter weight
+          letter-spacing: 0.03em;
+          transition: color 0.3s ease;
+
+          // Animated expanding underline
+          &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -4px;
+            width: 0;
+            height: 2px;
+            background: var(--primary-accent);
+            border-radius: 1px;
+            transition: width 0.35s cubic-bezier(0.25, 0.8, 0.25, 1),
+                        left 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+          }
 
           &:hover {
-            color: var(--primary-accent) !important;
+            color: #ffffff !important;
+
+            &::after {
+              width: 100%;
+              left: 0;
+            }
           }
         }
       }
     }
   }
 
+  // Override the old generic .text-white size (was 22px — way too large)
+  .text-white {
+    font-size: 0.9rem;
+  }
+
+  // Keep brand hover effect
+  .navbar-brand:hover {
+    color: var(--primary-accent) !important;
+  }
+
+  // ---------- Hamburger menu button (mobile) ----------
   .menu-toggle {
     display: none;
     flex-direction: column;
@@ -109,10 +138,12 @@
     }
   }
 
+  // ---------- Responsive (≤ 1200px) ----------
   @media (max-width: 1200px) {
     .navbar {
-    padding-right: 0 !important;
-  }
+      padding-right: 0 !important;
+    }
+
     .menu-toggle {
       display: flex;
       margin-right: 0.5rem !important;
@@ -123,14 +154,11 @@
     .container {
       margin-left: 0px;
     }
+
     &.scrolled {
       background: linear-gradient(110deg, var(--primary-accent), var(--primary-accent-dark));
       max-height: 6rem;
     }
-
-    .text-white {
-      font-size: 24px;
-    }  
 
     .nav-links {
       overflow-x: hidden !important;
@@ -147,6 +175,7 @@
       transform: translateX(100%);
       transition: transform 0.3s ease-in-out;
       display: flex;
+      margin-left: 0; // override the auto margin in mobile overlay
 
       &.open {
         transform: translateX(0);
@@ -159,12 +188,22 @@
         li {
           margin: 1rem 0;
 
-          .nav-link {
+          a, .nav-link {
             font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.85) !important;
+
+            &::after {
+              bottom: -6px;
+              height: 2px;
+              background: white;
+            }
           }
         }
       }
     }
-  }
 
+    .text-white {
+      font-size: 1.5rem;
+    }
+  }
 }
