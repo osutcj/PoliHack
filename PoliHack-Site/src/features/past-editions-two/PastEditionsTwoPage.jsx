@@ -51,7 +51,7 @@ function AnimatedStat({ label, value, triggerKey }) {
 }
 
 export default function PastEditionsTwoPage() {
-  const [activeEdition, setActiveEdition] = useState("v18");
+  const [activeEdition, setActiveEdition] = useState("v19");
   const activeEditionDetails = editionDetails[activeEdition];
 
   return (
@@ -63,12 +63,11 @@ export default function PastEditionsTwoPage() {
           <div className={styles.pastEditionTwoHeader}>
             <h1 className={styles.headingHover}>Relive the last editions</h1>
             <p className={styles.sectionIntro}>
-              Toggle between v.15 - v.18 to see the winning teams, core metrics,
-              and standout learnings. Update the copy anytime straight from this
-              data block.
+              Explore past PoliHack editions and the Gala, and discover the
+              teams and projects that stood out.
             </p>
           </div>
-          <nav className={styles.editionTabs} aria-label="Past edition selector">
+          <nav className={styles.editionTabs} aria-label="Past editions and Gala">
             {editionOrder.map((editionKey) => {
               const edition = editionDetails[editionKey];
               const isActive = activeEdition === editionKey;
@@ -76,6 +75,7 @@ export default function PastEditionsTwoPage() {
                 <button
                   type="button"
                   key={editionKey}
+                  aria-pressed={isActive}
                   className={`${styles.editionTab} ${
                     isActive ? styles.editionTabActive : ""
                   }`}
@@ -96,41 +96,47 @@ export default function PastEditionsTwoPage() {
                   <span>Dates</span>
                   <strong>{activeEditionDetails.dates}</strong>
                 </div>
-                <div>
-                  <span>Location</span>
-                  <strong>{activeEditionDetails.location}</strong>
+                {activeEditionDetails.location && (
+                  <div>
+                    <span>Location</span>
+                    <strong>{activeEditionDetails.location}</strong>
+                  </div>
+                )}
+              </div>
+            </div>
+            {activeEditionDetails.stats.length > 0 && (
+              <div className={styles.quickStatsCard}>
+                <h3>Quick Stats</h3>
+                <div className={styles.statsRow}>
+                  {activeEditionDetails.stats.map((stat) => (
+                    <AnimatedStat
+                      key={stat.label}
+                      label={stat.label}
+                      value={stat.value}
+                      triggerKey={activeEdition}
+                    />
+                  ))}
                 </div>
               </div>
-            </div>
-            <div className={styles.quickStatsCard}>
-              <h3>Quick Stats</h3>
-              <div className={styles.statsRow}>
-                {activeEditionDetails.stats.map((stat) => (
-                  <AnimatedStat
-                    key={stat.label}
-                    label={stat.label}
-                    value={stat.value}
-                    triggerKey={activeEdition}
-                  />
-                ))}
+            )}
+            {activeEditionDetails.winnerCategories.length > 0 && (
+              <div className={styles.winnersSection}>
+                <h2>Winners</h2>
+                <div className={styles.winnerCategories}>
+                  {activeEditionDetails.winnerCategories.map((winner) => (
+                    <article key={winner.category} className={styles.winnerCategory}>
+                      {winner.image && (
+                        <div className={styles.winnerImageWrapper}>
+                          <img src={winner.image} alt={`${winner.team} team`} />
+                        </div>
+                      )}
+                      <span>{winner.category}</span>
+                      <strong>{winner.team}</strong>
+                    </article>
+                  ))}
+                </div>
               </div>
-            </div>
-            <div className={styles.winnersSection}>
-              <h2>Winners</h2>
-              <div className={styles.winnerCategories}>
-                {activeEditionDetails.winnerCategories.map((winner) => (
-                  <article key={winner.category} className={styles.winnerCategory}>
-                    {winner.image && (
-                      <div className={styles.winnerImageWrapper}>
-                        <img src={winner.image} alt={`${winner.team} team`} />
-                      </div>
-                    )}
-                    <span>{winner.category}</span>
-                    <strong>{winner.team}</strong>
-                  </article>
-                ))}
-              </div>
-            </div>
+            )}
           </div>
         </section>
         <div className={styles.webWinnersSection}>

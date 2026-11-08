@@ -16,7 +16,7 @@ export const pastEditionCarouselImages = [
   { src: "/assets/Images/PoliHackV15_7.png" },
 ];
 
-export const editionOrder = ["v15", "v16", "v17", "v18"];
+export const editionOrder = ["v15", "v16", "v17", "v18", "v19", "gala"];
 
 export const editionDetails = {
   v15: {
@@ -90,9 +90,9 @@ export const editionDetails = {
     dates: "5-7 December 2025",
     location: "Cluj Bussiness Campus, Cloudflight Office",
     stats: [
-      { label: "Participants", value: 69 },
-      { label: "Teams", value: 69 },
-      { label: "Mentors", value: 69 },
+      { label: "Participants", value: 229 },
+      { label: "Teams", value: 42 },
+      { label: "Mentors", value: 14 },
     ],
     winnerCategories: [
       { category: "AppDev", team: "NoAiUsed", image: "/assets/Images/v18App.jpg" },
@@ -101,5 +101,31 @@ export const editionDetails = {
       { category: "Web", team: "Ultimii 5 Neuroni", image: "/assets/Images/v18Web.jpg" },
       { category: "Junior", team: "MOROMEȚII", image: "/assets/Images/v18Junior.jpg" },
     ],
+  },
+  v19: {
+    label: "v.19",
+    year: "2026",
+    title: "PoliHack v.19",
+    heroText:
+      "High school and university students spent 48 hours building projects with guidance from mentors. On the final day, teams demoed their work and pitched their ideas to the jury.",
+    dates: "24–26 April 2026",
+    location: "Cluj-Napoca",
+    stats: [
+      { label: "Participants", value: 69 },
+      { label: "Teams", value: 69 },
+      { label: "Mentors", value: 69 },
+    ],
+    winnerCategories: [],
+  },
+  gala: {
+    label: "Gala",
+    year: "2026",
+    title: "PoliHack Gala",
+    heroText:
+      "On December 14th, the PoliHack Gala gathers the 1st place winners to present their final product to the attending partners, incubators, and startups, with the goal of launching the presented projects into the market.",
+    dates: "14 December 2026",
+    location : "Cluj-Napoca",
+    stats: [],
+    winnerCategories: [],
   },
 };
