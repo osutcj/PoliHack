@@ -79,6 +79,11 @@ export default function Navbar() {
               </a>
             </li>
             <li>
+              <Link href="/docs" prefetch className="text-white" onClick={closeMenu}>
+                Docs
+              </Link>
+            </li>
+            <li>
               {/* <a 
                 className="text-white" 
                 href="https://docs.google.com/forms/d/e/1FAIpQLSec1QQ1G6tq5BPxaIDPEREGnm1bmi-N1SLe_9lyhhzSYXLHQg/viewform" 

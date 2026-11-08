@@ -7,11 +7,10 @@ import styles from "@/pages/CurrentEdition.module.scss";
 
 const { Header, Content } = Layout;
 
-export default function CurrentEditionSection() {
+export default function CurrentEditionSection({ documentsHeading = "You should read" }) {
   const {
     bannerImage,
     regulationsLink,
-    regulationsSingleLink,
     acordLink,
   } = currentEditionDocuments;
 
@@ -50,7 +49,7 @@ export default function CurrentEditionSection() {
         </div> */}
 
         <div className={styles.documentsSection}>
-          <h1 className={styles.headingHover}>You should read</h1>
+          <h1 className={styles.headingHover}>{documentsHeading}</h1>
           <Row gutter={[16, 16]}>
             <Col xs={24} sm={12} md={12} lg={12}>
               <Document title="REGULATIONS" source={regulationsLink} image={bannerImage} />
