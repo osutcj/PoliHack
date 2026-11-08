@@ -4,8 +4,8 @@ import CountUp from "react-countup";
 const formatter = (value) => <CountUp end={value} separator="," />;
 
 const stats = [
-  { id: 1, name: "Editions", value: "18" },
-  { id: 2, name: "Participants", value: "2700+" },
+  { id: 1, name: "Editions", value: "20" },
+  { id: 2, name: "Participants", value: "2950+" },
   { id: 3, name: "Sponsors", value: "50+" },
   { id: 4, name: "Reach", value: "110000+" },
 ];
