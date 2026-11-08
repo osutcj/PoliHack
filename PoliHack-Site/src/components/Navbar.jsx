@@ -42,16 +42,6 @@ export default function Navbar() {
         </button>
         <div className={`nav-links ${isMenuOpen ? "open" : ""}`}>
           <ul>
-            {/* <li>
-              <Link href="/about" className="text-white" onClick={closeMenu}>
-                About us
-              </Link>
-            </li> */}
-            {/* <li>
-              <Link href="/current-edition" className="text-white" onClick={closeMenu}>
-                Current Edition
-              </Link>
-            </li> */}
             <li>
               <Link href="/past-editions-2" prefetch className="text-white" onClick={closeMenu}>
                 Past Editions
@@ -63,16 +53,21 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <a href="https://forms.gle/EQrxtDr8uhcBnKyg9" target="_blank" rel="noopener noreferrer" className="text-white" onClick={closeMenu}>
+              <a 
+                href="https://forms.gle/EQrxtDr8uhcBnKyg9" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-white" 
+                onClick={closeMenu}
+              >
                 Register
               </a>
             </li>
-            
             <li>
-              <a 
-                className="text-white" 
-                href="https://osutcluj.pixieset.com/polihack26/" 
-                target="_blank" 
+              <a
+                className="text-white"
+                href="https://osutcluj.pixieset.com/polihack26/"
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 Gallery
@@ -82,16 +77,6 @@ export default function Navbar() {
               <Link href="/docs" prefetch className="text-white" onClick={closeMenu}>
                 Docs
               </Link>
-            </li>
-            <li>
-              {/* <a 
-                className="text-white" 
-                href="https://docs.google.com/forms/d/e/1FAIpQLSec1QQ1G6tq5BPxaIDPEREGnm1bmi-N1SLe_9lyhhzSYXLHQg/viewform" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                Register
-              </a> */}
             </li>
           </ul>
         </div>

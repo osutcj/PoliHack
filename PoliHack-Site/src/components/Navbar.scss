@@ -1,88 +1,104 @@
 .navbar {
-  position: fixed !important;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1rem 2rem;
-  background: transparent !important;
-  transition: background 0.3s ease-in-out;
+  padding: 0.75rem 1.5rem;
+  background-color: transparent;
+  box-shadow: none;
+  /* Tranziție fluidă pentru scroll fade-in și drop shadow */
+  transition: background-color 0.4s ease-in-out,
+              box-shadow 0.4s ease-in-out;
   z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 
+  /* Starea activată la scroll: fundal roșu închis + umbră modernă */
   &.scrolled {
-    background: linear-gradient(110deg, var(--primary-accent), var(--primary-accent-dark)) !important;
-    display: flex;
-    justify-content: left !important;
-    max-height: 6rem;
-    align-content: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    background-color: var(--primary-accent);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
   }
 
+  /* Container centrat, fluid, cu flexbox responsive și fără margini fixe */
   .container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
-    margin-left: 10rem;
-    gap: 1rem;
+    max-width: 75rem; /* ~1200px */
+    margin: 0 auto;
+    gap: 0.75rem;
   }
 
-  .logo, .navbar-brand, .text-white {
+  /* Zona Brand: Logo + PoliHack */
+  .logo,
+  .navbar-brand,
+  .text-white {
     border: none !important;
     background-color: transparent !important;
     text-decoration: none !important;
   }
 
-  .logo img {
-    position: relative;
-    z-index: 1;
-    width: 80px;
+  .logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      position: relative;
+      z-index: 1;
+      width: 4.5rem; /* Scalabil cu zoom-ul browserului */
+      height: auto;
+    }
   }
 
   .navbar-brand {
     z-index: 1;
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 700;
     color: white !important;
     white-space: nowrap;
+    transition: color 0.25s ease;
+
+    &:hover {
+      color: var(--primary-accent) !important;
+    }
   }
 
-  // --- Nav links: pushed to the right, smaller & lighter typography ---
+  /* Link-uri de navigare aliniate spre dreapta */
   .nav-links {
     display: flex;
-    gap: 2rem;
-    margin-left: auto; // push the entire link group to the far right
+    margin-left: auto; /* Împinge linkurile în extrema dreaptă */
 
     ul {
       list-style: none;
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       gap: 1.75rem;
       margin: 0;
       padding: 0;
 
       li {
-        // Give every link inside <li> the hover-underline animation
-        a, .nav-link {
+        a,
+        .nav-link {
           position: relative;
           text-decoration: none;
-          color: rgba(255, 255, 255, 0.85) !important;
-          font-size: 0.9rem;        // smaller than brand text
-          font-weight: 400;         // lighter weight
-          letter-spacing: 0.03em;
+          color: rgba(255, 255, 255, 0.82) !important;
+          font-size: 1rem; /* Ierarhie: mai mic decât brandul (1.5rem) */
+          font-weight: 400; /* Lighter weight */
+          letter-spacing: 0.025em;
+          white-space: nowrap;
           transition: color 0.3s ease;
 
-          // Animated expanding underline
+          /* Animație modernă: linie subțire care se extinde din centru la hover */
           &::after {
             content: "";
             position: absolute;
             left: 50%;
-            bottom: -4px;
+            bottom: -0.25rem;
             width: 0;
-            height: 2px;
-            background: var(--primary-accent);
-            border-radius: 1px;
+            height: 0.125rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 0.0625rem;
             transition: width 0.35s cubic-bezier(0.25, 0.8, 0.25, 1),
                         left 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
           }
@@ -100,73 +116,62 @@
     }
   }
 
-  // Override the old generic .text-white size (was 22px — way too large)
   .text-white {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
-  // Keep brand hover effect
-  .navbar-brand:hover {
-    color: var(--primary-accent) !important;
-  }
-
-  // ---------- Hamburger menu button (mobile) ----------
+  /* Buton Hamburger (mobile) */
   .menu-toggle {
     display: none;
     flex-direction: column;
-    gap: 5px;
+    gap: 0.3125rem;
     background: none;
     border: none;
     cursor: pointer;
     z-index: 1100;
 
     .bar {
-      width: 25px;
-      height: 3px;
+      width: 1.5625rem;
+      height: 0.1875rem;
       background: white;
       transition: all 0.3s ease-in-out;
 
       &.open:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
+        transform: translateY(0.5rem) rotate(45deg);
       }
       &.open:nth-child(2) {
         opacity: 0;
       }
       &.open:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-0.5rem) rotate(-45deg);
       }
     }
   }
 
-  // ---------- Responsive (≤ 1200px) ----------
-  @media (max-width: 1200px) {
-    .navbar {
-      padding-right: 0 !important;
-    }
+  /* Responsive (≤ 1200px / 75rem) */
+  @media (max-width: 75rem) {
+    padding: 0.75rem 1rem;
 
     .menu-toggle {
       display: flex;
-      margin-right: 0.5rem !important;
-      margin-left: auto !important;
-      order: 1 !important;
+      margin-left: auto;
+      order: 1;
     }
 
     .container {
-      margin-left: 0px;
+      flex-wrap: nowrap;
     }
 
     &.scrolled {
-      background: linear-gradient(110deg, var(--primary-accent), var(--primary-accent-dark));
-      max-height: 6rem;
+      background-color: var(--primary-accent);
     }
 
     .nav-links {
-      overflow-x: hidden !important;
-      width: 100% !important;
-      min-width: fit-content !important;
-      position: fixed !important;
-      top: 0 !important;
-      left: 0 !important;
+      overflow-x: hidden;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
       height: 100vh;
       background: linear-gradient(135deg, var(--primary-accent), var(--primary-accent-dark));
       flex-direction: column;
@@ -175,7 +180,7 @@
       transform: translateX(100%);
       transition: transform 0.3s ease-in-out;
       display: flex;
-      margin-left: 0; // override the auto margin in mobile overlay
+      margin-left: 0;
 
       &.open {
         transform: translateX(0);
@@ -183,18 +188,19 @@
 
       ul {
         flex-direction: column;
+        flex-wrap: nowrap;
         text-align: center;
 
         li {
           margin: 1rem 0;
 
-          a, .nav-link {
+          a,
+          .nav-link {
             font-size: 1.5rem;
             color: rgba(255, 255, 255, 0.85) !important;
 
             &::after {
-              bottom: -6px;
-              height: 2px;
+              bottom: -0.375rem;
               background: white;
             }
           }
