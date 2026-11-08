@@ -11,14 +11,14 @@ import styles from "@/pages/Home.module.scss";
 
 const { Header, Content } = Layout;
 
-const COUNTDOWN_TARGET = new Date("2026-04-24T16:00:00+03:00").getTime();
+const COUNTDOWN_TARGET = new Date("2027-04-24T16:00:00+03:00").getTime();
 
 function formatCountdown(target) {
   const now = new Date().getTime();
   const distance = target - now;
 
   if (distance <= 0) {
-    return "Hackathon Has Started!";
+    return "Hackathon has started!";
   }
 
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -36,13 +36,15 @@ export default function HomePage() {
     const interval = window.setInterval(() => {
       const nextValue = formatCountdown(COUNTDOWN_TARGET);
       setCountdown(nextValue);
-      if (nextValue === "Hackathon Has Started!") {
+      if (nextValue === "Hackathon has started!") {
         clearInterval(interval);
       }
     }, 1000);
 
     return () => clearInterval(interval);
   }, []);
+
+  const hasStarted = countdown === "Hackathon has started!";
 
   return (
     <>
@@ -53,8 +55,14 @@ export default function HomePage() {
           <div className={styles.heroContent}>
             <h1 className={styles.heading}>#Engineering the future!</h1>
             <img className={styles.logo} src="/assets/Logos/LogoWhite.png" alt="Logo PoliHack" />
-            <h1 className={styles.heading}>Hackathon starts in:</h1>
-            <p className={styles.timer} id="timer" role="timer" aria-live="polite">{countdown}</p>
+            
+            {!hasStarted && (
+              <h1 className={styles.heading}>Hackathon starts in:</h1>
+            )}
+            
+            <p className={styles.timer} id="timer" role="timer" aria-live="polite">
+              {countdown}
+            </p>
           </div>
         </section>
         <div className={styles.descriptionSection}>
