@@ -1,6 +1,6 @@
-import { InstagramOutlined, FacebookFilled } from "@ant-design/icons";
+import { InstagramOutlined, FacebookFilled, LinkedinFilled } from "@ant-design/icons";
 
-export default function TeamCard({ name, role, image, instagram, facebook }) {
+export default function TeamCard({ name, role, image, instagram, facebook, linkedin }) {
   return (
     <div className="card w-100 mb-4 p-3 text-white center team-card">
       <div className="image-circle">
@@ -16,6 +16,17 @@ export default function TeamCard({ name, role, image, instagram, facebook }) {
           <a href={facebook} target="_blank" rel="noopener noreferrer" className="team-facebook">
             <FacebookFilled />
           </a>
+          {linkedin && (
+            <a
+              href={linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="team-linkedin"
+              aria-label={`${name} on LinkedIn`}
+            >
+              <LinkedinFilled />
+            </a>
+          )}
         </div>
       </div>
     </div>
