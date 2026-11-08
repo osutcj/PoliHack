@@ -71,7 +71,7 @@ export default function Navbar() {
             <li>
               <a 
                 className="text-white" 
-                href="https://osutcluj.pixieset.com/polihack-2/" 
+                href="https://osutcluj.pixieset.com/polihack26/" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
