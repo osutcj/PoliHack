@@ -315,6 +315,12 @@
   object-fit: cover;
 }
 
+.winnerCategories[data-edition="v19"] .winnerImageWrapper img {
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-position: center 20%;
+}
+
 .winnerCategory span {
   text-transform: uppercase;
   font-size: 0.9rem;

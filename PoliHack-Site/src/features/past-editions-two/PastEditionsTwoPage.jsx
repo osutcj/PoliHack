@@ -122,7 +122,7 @@ export default function PastEditionsTwoPage() {
             {activeEditionDetails.winnerCategories.length > 0 && (
               <div className={styles.winnersSection}>
                 <h2>Winners</h2>
-                <div className={styles.winnerCategories}>
+                <div className={styles.winnerCategories} data-edition={activeEdition}>
                   {activeEditionDetails.winnerCategories.map((winner) => (
                     <article key={winner.category} className={styles.winnerCategory}>
                       {winner.image && (

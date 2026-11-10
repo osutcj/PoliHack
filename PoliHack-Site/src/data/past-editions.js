@@ -111,11 +111,17 @@ export const editionDetails = {
     dates: "24–26 April 2026",
     location: "Cluj-Napoca",
     stats: [
-      { label: "Participants", value: 69 },
-      { label: "Teams", value: 69 },
-      { label: "Mentors", value: 69 },
+      { label: "Participants", value: 263 },
+      { label: "Teams", value: 51 },
+      { label: "Mentors", value: 27 },
     ],
-    winnerCategories: [],
+    winnerCategories: [
+      { category: "AppDev with AI", team: "GeekChic", image: "/assets/Images/AppDev_with_AI_GeekChic_v19.jpg" },
+      { category: "Cybersecurity", team: "Fly Projecta", image: "/assets/Images/Cybersecurity_Fly_Projecta_v19.jpg" },
+      { category: "Embedded", team: "Z_DIF", image: "/assets/Images/Embedded_Z_DIF._v19.jpg" },
+      { category: "Web", team: "Chinta Roială", image: "/assets/Images/Web_Chinta_Roială._v19.jpg" },
+      { category: "Junior", team: "Salahorii", image: "/assets/Images/Junior_Salahorii_v19.jpg" },
+    ],
   },
   gala: {
     label: "Gala",

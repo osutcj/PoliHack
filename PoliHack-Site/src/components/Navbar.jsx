@@ -54,7 +54,7 @@ export default function Navbar() {
             </li>
             <li>
               <a 
-                href="https://forms.gle/EQrxtDr8uhcBnKyg9" 
+                href="https://forms.gle/rFFeQ6SKSjC1hv8o9" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-white" 

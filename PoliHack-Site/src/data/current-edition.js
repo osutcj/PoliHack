@@ -68,7 +68,7 @@ export const volunteersObjects = [
 
 export const currentEditionDocuments = {
   bannerImage: "/assets/DocumentBanner.jpg",
-  regulationsLink: "https://drive.google.com/file/d/1wqj7VHUeTztDJjUdvJdGxabbkIwPVLq6/view?usp=sharing",
+  regulationsLink: "https://docs.google.com/document/d/14m1prMCR6QMAwUpg0GNpI0uLZt19dakQ/edit?usp=sharing&ouid=101730860320573880370&rtpof=true&sd=true",
   regulationsSingleLink: "https://drive.google.com/file/d/1IAN5pqH9IF4U9JD9cqrdvB5L_4lHXWN7/view?usp=sharing",
   acordLink: "https://drive.google.com/file/d/1P9vFJ2lGB1nn8PFTF4MSTn7IbJfchNmm/view?usp=sharing",
   programLink: "https://drive.google.com/file/d/1wqj7VHUeTztDJjUdvJdGxabbkIwPVLq6/view?usp=sharing",
