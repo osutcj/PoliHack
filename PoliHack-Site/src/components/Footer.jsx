@@ -129,22 +129,22 @@ export default function Footer() {
                 Contact Info
               </h3>
               <p className="text-white contact-info text-bold">
-                Andreea Arimia - BC Responsible
+                Cosmin Irimiciuc - BC Responsible
               </p>
               <p className="text-white contact-info">
-                Phone number: +40 762 385 168
+                Phone number: +40 755 801 279
               </p>
               <p className="text-white contact-info">
-                Email: andreea.arimia@osutcluj.com
+                Email: cosmin.irimiciuc@osutcluj.com
               </p>
               <p className="text-white contact-info text-bold">
-                Iulian Chirilă - Coordinator
+                Ioana Beldean - Coordinator
               </p>
               <p className="text-white contact-info">
-                Phone number: +40 746 375 020
+                Phone number: +40 743 975 523
               </p>
               <p className="text-white contact-info">
-               Email: iulian.chirila@osutcluj.com
+               Email: ioana.beldean@osutcluj.com
               </p>
             </div>
           </div>
