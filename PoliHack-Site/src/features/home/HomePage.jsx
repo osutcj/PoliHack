@@ -11,7 +11,7 @@ import styles from "@/pages/Home.module.scss";
 
 const { Header, Content } = Layout;
 
-const COUNTDOWN_TARGET = new Date("2026-04-24T16:00:00+03:00").getTime();
+const COUNTDOWN_TARGET = new Date("2026-12-04T16:00:00+03:00").getTime();
 
 function formatCountdown(target) {
   const now = new Date().getTime();
