@@ -93,7 +93,7 @@ export default function Footer() {
 
               {/* Mail */}
               <div className="p-2 p-lg-3 mt-2 mt-lg-3 footer-icon-social hover-image">
-                <a href="mailto:polihhack@osutcluj.com" target="_blank" rel="noopener noreferrer">
+                <a href="mailto:polihack@osutcluj.com" target="_blank" rel="noopener noreferrer">
                   <MailOutlined className="w-100" />
                 </a>
               </div>
